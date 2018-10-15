@@ -1,0 +1,56 @@
+html,body,h1,h2,h3,h4,h5,h6,hr,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em,i,b,strong,pre,legend,button,input,textarea,select,address,cite,dfn,var,code,kbd,samp,small,sup,sub, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video,a,span{ margin:0; padding:0; font-weight: normal; font-style: normal; box-sizing:border-box; }
+ul,ol,li{list-style:none;}
+a{text-decoration:none; }
+img{ border:0;}
+table{border-collapse:collapse; border-spacing: 0; }
+input,select,textarea,button{ outline:none; resize: none; font-family:"Microsoft Yahei","微软雅黑"; overflow: auto; }
+*:focus{outline:none}
+body{ font-family:"Microsoft Yahei","微软雅黑","\5FAE\8F6F\96C5\9ED1"; }
+
+input::-ms-clear, input::-ms-reveal{display: none;}
+/* 清除float浮动 */
+.clearfix{ *zoom: 1; }
+.clearfix:after{ content: ""; display: block; clear: both; height: 0; visibility: hidden; }
+.icon{ display: block; background-repeat: no-repeat; }
+
+/* 后台 */
+.page-index{}
+.top-bgimg{ min-width: 1200px; height: 550px; background: #313047 url(../images/bg1.png) no-repeat center top; }
+.index-header{ width: 1200px; margin: auto; padding: 20px 0 0; }
+.index-header a{ cursor: pointer; }
+.index-header .logobox{ float: left; margin-left: 150px; color: #fff; }
+.index-header .logobox img{ width: 44px; }
+.index-header .logobox dt{ float: left; }
+.index-header .logobox dd{ float: left; margin: 5px 0 0 10px; }
+.index-header .logobox dd h3{ font-size: 16px; }
+.index-header .logobox dd h4{ font-size: 12px; }
+.index-header .nav{ float: left; margin: 0 0 0 250px; }
+.index-header .nav li{ float: left; margin: 10px 30px 0 0; }
+.index-header .nav a{ display: block; color: #fff; font-size: 14px; }
+.index-header .btns{ float: left; margin: 6px 0 0 20px; font-size: 14px; }
+.index-header .btns a{ display: block; padding: 0 15px; height: 26px; line-height: 26px; background-color: #FD566A; color: #fff; border-radius:5px; cursor: pointer; }
+.top-bgimg .banner{ width: 1200px; margin: auto; text-align: center; margin-top: 140px; font-size: 0; }
+.top-bgimg .banner .bg1{ display: inline-block; vertical-align: top; }
+.top-bgimg .banner .bg1 img{ height: 440px; }
+.top-bgimg .banner .bg2{ display: inline-block; vertical-align: top; color: #fff; margin: 0 110px 0 -150px; }
+.top-bgimg .banner .bg2 .logo{ margin: auto; }
+.top-bgimg .banner .bg2 h1{ line-height: 60px; font-size: 40px; margin-top: 10px; }
+.top-bgimg .banner .bg2 h3{ margin-top: 10px; font-size: 18px; }
+.top-bgimg .banner .bg3{ display: inline-block; vertical-align: top; }
+.top-bgimg .banner .bg3 img{ height: 440px; }
+.top-bgimg .banner .loginbox{ display: inline-block; width: 240px; vertical-align: top; color: #fff; margin: 70px 110px 0 -150px; }
+.top-bgimg .banner .loginbox li{ padding: 9px 0; position: relative; }
+.top-bgimg .banner .loginbox .input{ width: 100%; height: 32px; padding: 0 10px; background-color: #fff; border-radius: 3px; border: 0; font-size: 12px; }
+.top-bgimg .banner .loginbox .btn{ display: block; line-height: 32px; background-color: #FD566A; color: #fff; border-radius: 3px; font-size: 14px; cursor: pointer; }
+.top-bgimg .banner .loginbox .forgetpw{ color: #fff; font-size: 13px; cursor: pointer; }
+.top-bgimg .banner .loginbox .yzmbox{ padding-right: 90px; }
+.top-bgimg .banner .loginbox .yzmbox .btn{ position: absolute; right: 0; top: 10px; font-size: 12px; width: 80px; }
+
+.page-index .section-2{ width: 1200px; margin: auto; margin-top: 350px; }
+.page-index .section-2 img{ width: 90%; }
+
+.page-index .footer{ width: 1200px; margin: auto; margin-top: 200px; margin-bottom: 40px; text-align: center; }
+.page-index .footer .row1{ font-size: 12px; padding: 5px 0 0; }
+
+.page-index .backtop{ display: none; cursor: pointer; position: fixed; right: 0; top: 60%; width: 50px; height: 50px; 
+	background: #aaa url(../images/backtop.png) center center no-repeat; }

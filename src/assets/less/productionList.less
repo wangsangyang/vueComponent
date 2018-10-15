@@ -1,0 +1,48 @@
+@fontsize12: 12px;
+@fontsize14: 14px;
+@fontsize16: 16px;
+
+
+.cont2{ background-color: #fff; padding: 15px; margin-top: 20px; }
+
+.tableList{
+  tbody{
+     td.maxwidth{
+        width: 400px;
+     }
+  }
+} 
+
+.imgList{
+  overflow: hidden;
+  span{ display: block; }
+  li{ 
+      float: left;
+      width: 80px;
+      height: 90px;
+      text-align: center;
+      margin: 8px 8px 6px 8px;
+      border: solid 1px #DCDBDB;
+      font-size: @fontsize14;
+      position: relative;
+      .imgbox{
+          height: 100%;
+          overflow: hidden;
+          text-align: center;
+          &::before{
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            vertical-align: middle;
+          }
+          img{
+            display: inline-block;
+            max-width: 100%;
+            max-height: 100%;
+            vertical-align: middle;
+          }
+      }
+    }
+  }
+

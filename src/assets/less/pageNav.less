@@ -1,0 +1,34 @@
+@fontSize: 16px;
+.pageNav{
+  width: 230px;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  li{
+    padding: 5px 30px 5px 0;
+  	a{
+      cursor: pointer;
+      display: block;
+      padding: 15px 0 15px 50px;
+      overflow: hidden;
+      color: #000;
+      img{
+        display: block;
+        float: left;
+      }
+      span{
+        display: block;
+        float: left;
+        margin: 3px 0 0 15px;
+        font-size: @fontSize;
+      }
+      &:hover{ background-color: #EFEFEF; }
+    }
+    a.active{
+      color: #0FB6F7;
+    }
+  }
+  li:nth-child(1){
+    padding-top: 10px;
+  }
+}

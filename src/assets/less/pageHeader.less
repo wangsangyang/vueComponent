@@ -1,0 +1,41 @@
+@fontSize12: 12px;
+@fontSize14: 14px;
+@fontSize16: 16px;
+
+.pageHeader{
+  background-color: #f6f8f9;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: @fontSize14;
+  padding: 20px 50px 0;
+  z-index: 99;
+  .left{
+  	float: left;
+  	width: 230px;
+  }
+  .middle{
+  	float: left;
+  }
+  .right{
+  	float: right;
+  }
+  .signout{
+    color: #000;
+    cursor: pointer;
+  }
+  a{ cursor: pointer; }
+  .logobox{ 
+    float: left; 
+    margin-top: -8px;
+    white-space: nowrap;
+    img{ width: 44px; }
+    dt{ float: left; }
+    dd{ float: left; margin: 7px 0 0 10px; }
+    dd h3{ font-size: @fontSize14; }
+    dd h4{ font-size: @fontSize12; color: #666; }
+  } 
+}
+
