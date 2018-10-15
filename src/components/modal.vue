@@ -3,7 +3,7 @@
     <div class="m-modal" :class="{'show': show}" v-if="show">
         <div class="container">
             <div class="bodyer">
-                这是modal组件{{msg}}
+                {{msg}}
             </div>
             <div class="footer">
                 <a class="btn" @click="closeModal">确定</a>
@@ -21,7 +21,6 @@ export default {
            temp: this.show
         }
     },
-
     watch: {
       show(val) {
         this.temp = val;
