@@ -1,13 +1,8 @@
 <template>
 
-    <div class="m-modal" :class="{'show': show}" v-if="show">
+    <div class="m-loading" :class="{'show': show}">
         <div class="container">
-            <div class="bodyer">
-                {{msg}}
-            </div>
-            <div class="footer">
-                <a class="btn" @click="closeModal">确定</a>
-            </div>
+            <span></span>  
         </div>
     </div>
 
@@ -41,15 +36,18 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.m-modal{
+.m-loading{
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
     .container{ 
-        width: 300px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
         background-color: #fff;
         position: fixed;
         top: 50%;
@@ -57,15 +55,6 @@ export default {
         transform: translate(-50%, -50%);
         .bodyer{
             padding: 20px;
-        }
-        .footer{
-            border-top: solid 1px #ddd;
-            margin-top: -1px;
-            .btn{ 
-                display: block;
-                text-align: center;
-                padding: 8px 0;
-            }
         }
     }
     &.show{

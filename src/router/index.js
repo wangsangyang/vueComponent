@@ -4,7 +4,8 @@ import {Message} from 'element-ui'
 import post from '@/components/post'
 import postEdit from '@/components/postEdit'
 import shenhePost from '@/components/shenhePost'
-import modal from '@/components/modal'
+// import modal from '@/components/plug/modal'
+// import loading from '@/components/plug/loading'
 
 Vue.use(Router)
 
@@ -50,15 +51,7 @@ const router = new Router({
         navActive: 'shenhePost'
       }
     },
-    {
-      path: '/modal',
-      name: 'modal',
-      component: modal,
-      meta: {
-        isNeedlogin: false,
-        isNeedNav: false,
-      }
-    },
+
   ],
   linkActiveClass: 'active',
   linkExactActiveClass: '',
@@ -70,14 +63,7 @@ router.beforeEach((to, from, next)=>{
   //console.log(to);
   let isNeedlogin = to.meta.isNeedlogin;
   let path = to.name;
-  let quanxianState = localStorage.getItem('quanxianState');
 
-  let loginTimestamp = localStorage.getItem('lastLoginTimestamp');
-  let nowTime = new Date().getTime();
-  let isLoginTimeout = (nowTime-loginTimestamp)>2*60*60*1000;//大于2小时：说明登录超时
-  //console.log(quanxianState);
-  //console.log(nowTime-loginTimestamp);
-  //console.log((nowTime-loginTimestamp)>10*1000);
   next();
 
 })

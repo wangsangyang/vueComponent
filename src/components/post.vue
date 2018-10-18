@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div>
 
 
       <table class="tableList" width="100%" v-if="!$route.meta.isChildren">
@@ -21,22 +21,13 @@
                 <td>张三</td>
                 <td><router-link :to="{name: 'postEdit'}">查看</router-link></td>
             </tr>
-            <tr>
-                <td>斗破苍穹</td>
-                <td>张三</td>
-                <td><router-link :to="{name: 'postEdit'}">查看</router-link></td>
-            </tr>
-            <tr>
-                <td>斗破苍穹</td>
-                <td>张三</td>
-                <td><router-link :to="{name: 'postEdit'}">查看</router-link></td>
-            </tr>
           </tbody>
       </table>
 
       <el-button type="primary" @click="modalShowFn">弹窗</el-button>
 
-      <modal :show="modalShow" :msg="msg" @on-show="onShowFn"></modal>
+      <walert :show="modalShow" :msg="msg" @on-show="onShowFn"></walert>
+      <!-- <loading :show="modalShow" :msg="msg"></loading> -->
       
       <router-view></router-view>
     
@@ -45,15 +36,17 @@
 </template>
 
 <script>
-import modal from './modal'
+import walert from './plug/alert'
+import modal from './plug/modal'
+import loading from '@/components/plug/loading'
 
 export default {
   name: 'post',
-  components: {modal},
+  components: {walert      ,modal,loading},
   data () {
     return {
       modalShow: false,
-      msg: '哈哈'
+      msg: '加载中...'
     }
   },
   methods:{
