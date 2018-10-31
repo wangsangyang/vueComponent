@@ -7,14 +7,10 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import constant from './components/constant'
-
 import 'normalize.css'
 import './assets/less/reset.less'
 
 Vue.config.productionTip = false
-
-Vue.prototype.GLOBAL = constant
 
 Vue.use(ElementUI)
 	

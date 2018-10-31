@@ -6,7 +6,8 @@
                 {{msg}}
             </div>
             <div class="footer">
-                <a class="btn" @click="closeModal">确定</a>
+                <a class="btn" @click="close">取消</a>
+                <a class="btn" @click="sure">确定</a>
             </div>
         </div>
     </div>
@@ -27,14 +28,17 @@ export default {
         //this.$emit('on-show',val);
       },
       temp(val) {
-        console.log(val);
+        //console.log(val);
         //this.$emit('on-show',val);
       }
     },
     methods: {
-        closeModal(){
-            //this.temp = false;
-            this.$emit('on-show',false);
+        close(){
+            this.$emit('close',false);
+        },
+        sure(){
+            this.$emit('close',false);
+            this.$emit('sure',false);
         },
     }
 }
@@ -60,12 +64,18 @@ export default {
             padding: 20px;
         }
         .footer{
+            display: flex;
             border-top: solid 1px #ddd;
             margin-top: -1px;
             .btn{ 
-                display: block;
+                flex: 1;
                 text-align: center;
-                padding: 8px 0;
+                padding: 10px 0;
+                font-size: 14px;
+                &:nth-child(2){
+                    border-left: solid 1px #ddd;
+                    color: #0246af;
+                }
             }
         }
     }

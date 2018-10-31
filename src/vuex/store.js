@@ -3,26 +3,33 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 const state = {
-    isUpdateProductionList: false,//是否刷新作品管理列表
+    update: false,//是否刷新作品管理列表
 }
 
 const mutations = {
-    updateProductionList(state,isUpdate){
-    	  //console.log(isUpdate);
-    	  //console.log('mutations');
-        state.isUpdateProductionList = isUpdate;
+    updateMutation(state,isUpdate){
+    	console.log(isUpdate);
+        state.update = isUpdate;
     },
 }
 
 const getters = {
-	productionListState(state){
-		//console.log('getters');
-		return state.isUpdateProductionList;
+	getUpdate(state){
+		console.log(state.update);
+		return state.update;
 	},
+}
+
+const actions = {
+    updateAction({commit},val){
+        console.log(val);
+        commit('updateMutation',val)
+    }
 }
 
 export default new Vuex.Store({
     state,
     mutations,
-    getters
+    getters,
+    actions,
 });
